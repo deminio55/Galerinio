@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sortDialogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/app_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <!-- Sort section -->
+    <TextView
+        android:id="@+id/tvSortSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/sortRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <RadioButton
+            android:id="@+id/sortByName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_name"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/sortByDateTaken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_date_taken"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/sortByDateModified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_date_modified"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/sortBySize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_size"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/sortByCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_custom"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <!-- Sort order -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <CheckBox
+            android:id="@+id/sortDescending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_descending"
+            android:textColor="@color/app_on_surface" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/viewGroupingDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/app_divider" />
+
+        <!-- Grouping section -->
+        <TextView
+            android:id="@+id/tvGroupingSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grouping"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/groupingRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+        <RadioButton
+            android:id="@+id/groupingNone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grouping_none"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/groupingByDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grouping_by_day"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/groupingByWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grouping_by_week"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/groupingByMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grouping_by_month"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/groupingByYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grouping_by_year"
+            android:textColor="@color/app_on_surface"
+            android:paddingVertical="8dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@color/app_on_surface"
+                style="?attr/borderlessButtonStyle" />
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@android:string/ok"
+                android:textColor="?attr/colorSecondary"
+                style="?attr/borderlessButtonStyle" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/themeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/drawer_surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/themeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_mode"
+            android:textColor="@color/app_on_surface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/themeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/theme_mode_description"
+            android:textColor="@color/app_on_surface_secondary" />
+
+        <RadioGroup
+            android:id="@+id/rgThemeMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <RadioButton
+                android:id="@+id/radioThemeLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_light" />
+
+            <RadioButton
+                android:id="@+id/radioThemeDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_dark" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/lightSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/theme_palette_light_title"
+            android:textColor="@color/app_on_surface"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lightBaseLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/theme_base_palette_row"
+            android:textColor="@color/app_on_surface_secondary" />
+
+        <LinearLayout
+            android:id="@+id/lightPaletteRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <View android:id="@+id/lightPaletteOption0" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightPaletteOption1" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightPaletteOption2" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightPaletteOption3" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightPaletteOption4" android:layout_width="34dp" android:layout_height="34dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lightAccentLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/theme_accent_color_row"
+            android:textColor="@color/app_on_surface_secondary" />
+
+        <LinearLayout
+            android:id="@+id/lightAccentRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <View android:id="@+id/lightAccentOption0" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightAccentOption1" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightAccentOption2" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightAccentOption3" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/lightAccentOption4" android:layout_width="34dp" android:layout_height="34dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/darkSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/theme_palette_dark_title"
+            android:textColor="@color/app_on_surface"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/darkBaseLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/theme_base_palette_row"
+            android:textColor="@color/app_on_surface_secondary" />
+
+        <LinearLayout
+            android:id="@+id/darkPaletteRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <View android:id="@+id/darkPaletteOption0" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkPaletteOption1" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkPaletteOption2" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkPaletteOption3" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkPaletteOption4" android:layout_width="34dp" android:layout_height="34dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/darkAccentLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/theme_accent_color_row"
+            android:textColor="@color/app_on_surface_secondary" />
+
+        <LinearLayout
+            android:id="@+id/darkAccentRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <View android:id="@+id/darkAccentOption0" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkAccentOption1" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkAccentOption2" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkAccentOption3" android:layout_width="34dp" android:layout_height="34dp" android:layout_marginEnd="10dp" />
+            <View android:id="@+id/darkAccentOption4" android:layout_width="34dp" android:layout_height="34dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+

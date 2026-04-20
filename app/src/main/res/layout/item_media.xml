@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.galerinio.presentation.ui.widget.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1dp"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/media_item_border"
+        android:contentDescription="@string/media_item" />
+
+    <FrameLayout
+        android:id="@+id/videoOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/video_icon"
+            android:src="@android:drawable/ic_media_play" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/protectedOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6E000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/protectedIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/security_enable_folder_protection"
+        android:src="@drawable/ic_lock_24"
+        android:tint="@android:color/white"
+        android:visibility="gone" />
+
+    <!-- Затемнение при выборе -->
+    <View
+        android:id="@+id/selectionOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="invisible" />
+
+    <!-- Иконка-галочка (правый верхний угол) -->
+    <ImageView
+        android:id="@+id/selectionCheck"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_check_empty"
+        android:visibility="invisible"
+        android:contentDescription="@string/selection_check" />
+
+</com.example.galerinio.presentation.ui.widget.SquareFrameLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_surface"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:id="@+id/topBarHeader"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/app_surface"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnDrawerToggle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/open_side_menu"
+                android:src="@drawable/ic_more_horiz_24"
+                app:tint="@color/app_on_surface" />
+
+            <TextView
+                android:id="@+id/tvAppTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@color/app_on_surface"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:gravity="center_vertical" />
+
+            <ImageButton
+                android:id="@+id/btnAlbumsReorderEdit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/folders_reorder_edit"
+                android:src="@drawable/ic_reorder_24"
+                android:visibility="gone"
+                app:tint="@color/app_on_surface" />
+
+            <ImageButton
+                android:id="@+id/btnAlbumsReorderSave"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/folders_reorder_save"
+                android:src="@drawable/ic_save_24"
+                android:visibility="gone"
+                app:tint="@color/app_on_surface" />
+
+            <ImageButton
+                android:id="@+id/btnGeoRefreshTop"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Refresh map"
+                android:src="@android:drawable/ic_popup_sync"
+                android:visibility="gone"
+                app:tint="@color/app_on_surface" />
+
+            <ImageButton
+                android:id="@+id/btnViewGrid"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="2dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/view_mode_grid"
+                android:src="@drawable/ic_view_grid_24"
+                app:tint="@color/app_on_surface" />
+
+            <ImageButton
+                android:id="@+id/btnViewList"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/view_mode_list"
+                android:src="@drawable/ic_view_list_24"
+                app:tint="@color/app_on_surface" />
+
+            <ImageButton
+                android:id="@+id/btnSort"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/sort"
+                android:src="@drawable/ic_sort_24"
+                app:tint="@color/app_on_surface" />
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Обёртка: ViewPager2 для свайпа между категориями + overlay для PhotoView/AlbumDetail -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/mainViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- Overlay-контейнер для PhotoViewFragment и album-detail GalleryFragment -->
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/topFiltersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/app_surface"
+            android:elevation="8dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/filterAllFiles"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:id="@+id/iconAllFiles"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/menu_all_files"
+                    android:src="@drawable/ic_filter_all_files" />
+                <View
+                    android:id="@+id/indicatorAllFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/indicator_filter_selected"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/filterPhotos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:id="@+id/iconPhotos"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/menu_images"
+                    android:src="@drawable/ic_filter_photos" />
+                <View
+                    android:id="@+id/indicatorPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/indicator_filter_selected"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/filterVideos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:id="@+id/iconVideos"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/menu_videos"
+                    android:src="@drawable/ic_filter_video_file" />
+                <View
+                    android:id="@+id/indicatorVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/indicator_filter_selected"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/filterFolders"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:id="@+id/iconFolders"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/menu_folders"
+                    android:src="@drawable/ic_filter_folders" />
+                <View
+                    android:id="@+id/indicatorFolders"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/indicator_filter_selected"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/filterFavorites"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:id="@+id/iconFavorites"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/menu_favorites"
+                    android:src="@drawable/ic_filter_favorites" />
+                <View
+                    android:id="@+id/indicatorFavorites"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/indicator_filter_selected"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Drawer container: nav menu + in-drawer detail panel -->
+    <FrameLayout
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/drawer_surface">
+
+
+        <LinearLayout
+            android:id="@+id/drawerNavPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/drawerCategoryRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/app_divider" />
+
+                    <!-- Main navigation list (tools section) -->
+                    <com.google.android.material.navigation.NavigationView
+                        android:id="@+id/navigationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/drawer_surface"
+                        app:itemIconTint="@color/drawer_item_text_color"
+                        app:itemTextColor="@color/drawer_item_text_color"
+                        app:subheaderColor="@color/drawer_subheader_text_color"
+                        app:menu="@menu/drawer_menu" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <!-- Detail panel (Trash / Settings / About), hidden by default -->
+        <LinearLayout
+            android:id="@+id/drawerDetailPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/drawer_surface"
+            android:visibility="gone">
+
+            <!-- Header: back button + title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center_vertical"
+                android:background="@color/drawer_surface"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:id="@+id/btnDrawerDetailBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/close"
+                    android:src="@drawable/ic_arrow_back_24"
+                    app:tint="@color/app_on_surface" />
+
+                <TextView
+                    android:id="@+id/tvDrawerDetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/app_on_surface"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_divider" />
+
+            <!-- Fragment content fills rest of drawer -->
+            <FrameLayout
+                android:id="@+id/drawerDetailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/drawer_surface" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

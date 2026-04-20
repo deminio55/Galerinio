@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    tools:ignore="ContentDescription">
+
+    <CheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selection_check"
+        android:contentDescription="@string/selection_check"
+        android:visibility="gone"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_marginEnd="4dp"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:contentDescription="@string/media_item"
+        android:scaleType="centerCrop"
+        android:src="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/app_on_surface"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOriginalPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:textColor="@color/app_on_surface_secondary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnRestore"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/restore"
+        android:src="@android:drawable/ic_menu_revert"
+        app:tint="@color/app_on_surface" />
+
+    <ImageButton
+        android:id="@+id/btnDeleteForever"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/delete_forever"
+        android:src="@drawable/delete_icon"
+        app:tint="@color/app_on_surface" />
+
+</LinearLayout>

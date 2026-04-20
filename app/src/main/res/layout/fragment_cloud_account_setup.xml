@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/drawer_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Account name -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Galerinio.Cloud.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cloud_account_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAccountName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/app_on_surface" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Provider-specific fields container -->
+        <FrameLayout
+            android:id="@+id/providerFieldsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- Remote folder -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Galerinio.Cloud.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/cloud_remote_folder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRemoteFolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="/Galerinio"
+                android:textColor="@color/app_on_surface" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Sync mode -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cloud_sync_mode"
+            android:textColor="@color/app_on_surface"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgSyncMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioBackup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cloud_sync_mode_backup"
+                android:textColor="@color/app_on_surface"
+                android:buttonTint="@color/cloud_btn_text"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioMirror"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cloud_sync_mode_mirror"
+                android:textColor="@color/app_on_surface"
+                android:buttonTint="@color/cloud_btn_text"
+                android:layout_marginTop="4dp" />
+        </RadioGroup>
+
+        <!-- Sync rules -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cloud_sync_rules"
+            android:textColor="@color/app_on_surface"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchWifiOnly"
+            style="@style/Widget.Galerinio.Cloud.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/cloud_wifi_only"
+            android:checked="true" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchChargingOnly"
+            style="@style/Widget.Galerinio.Cloud.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/cloud_charging_only" />
+
+        <!-- Test connection -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTestConnection"
+            style="@style/Widget.Galerinio.Cloud.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cloud_test_connection"
+            android:textAllCaps="false" />
+
+        <!-- Save -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="@style/Widget.Galerinio.Cloud.FilledButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/save"
+            android:textAllCaps="false" />
+
+        <!-- Delete (only for editing existing account) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/Widget.Galerinio.Cloud.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/cloud_delete_account"
+            android:textColor="#FF5252"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>
+

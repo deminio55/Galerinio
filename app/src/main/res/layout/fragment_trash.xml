@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/drawer_surface">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/drawer_surface"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <!-- Settings Section -->
+        <LinearLayout
+            android:id="@+id/trashSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/drawer_surface"
+            android:padding="12dp">
+
+            <!-- Auto-cleanup toggle -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_auto_cleanup"
+                        android:textColor="@color/app_on_surface"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_auto_cleanup_desc"
+                        android:textColor="@color/app_on_surface_secondary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchAutoCleanup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Cleanup days picker -->
+            <LinearLayout
+                android:id="@+id/layoutCleanupDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="8dp"
+                    android:text="@string/settings_cleanup_days"
+                    android:textColor="@color/app_on_surface"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerCleanupDays"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:popupBackground="@color/drawer_surface" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/app_divider" />
+
+
+            <Button
+                android:id="@+id/btnEmptyTrash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/borderlessButtonStyle"
+                android:gravity="start|center_vertical"
+                android:minHeight="48dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="@string/empty_trash"
+                android:textColor="@color/app_on_surface"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- RecyclerView for trash items -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTrash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvEmptyTrash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/trash_is_empty"
+            android:textColor="@color/app_on_surface"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Batch action bar -->
+    <LinearLayout
+        android:id="@+id/batchActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/drawer_surface"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btnBatchCancel"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="@color/app_on_surface" />
+
+        <TextView
+            android:id="@+id/tvBatchCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/n_selected"
+            android:textColor="@color/app_on_surface"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnBatchSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/select_all"
+            android:textColor="@color/app_on_surface"
+            android:textSize="12sp"
+            style="?attr/borderlessButtonStyle" />
+
+        <ImageButton
+            android:id="@+id/btnBatchRestore"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/restore"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/app_on_surface" />
+
+        <ImageButton
+            android:id="@+id/btnBatchDeleteForever"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_forever"
+            android:src="@drawable/delete_icon"
+            app:tint="@color/app_on_surface" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <View
+        android:id="@+id/selectedMarker"
+        android:layout_width="3dp"
+        android:layout_height="26dp"
+        android:background="?attr/colorSecondary"
+        android:alpha="0" />
+
+    <ImageView
+        android:id="@+id/categoryIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:tint="@color/drawer_item_text_color"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/categoryTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:textColor="@color/drawer_item_text_color"
+        android:textSize="15sp" />
+
+    <CheckBox
+        android:id="@+id/categoryToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:buttonTint="@color/drawer_item_text_color" />
+
+    <ImageView
+        android:id="@+id/categoryDragHandle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="6dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_reorder_24"
+        app:tint="@color/drawer_item_text_color" />
+
+</LinearLayout>
+

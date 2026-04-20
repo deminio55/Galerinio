@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/drawer_surface"
+    android:fillViewport="true">
+
+    <RadioGroup
+        android:id="@+id/languageRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RadioButton android:id="@+id/langSystem"  android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_system_default" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langEn"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_en" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langDe"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_de" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langFr"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_fr" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langEs"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_es" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langPt"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_pt" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langIt"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_it" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langNl"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_nl" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langEl"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_el" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langPl"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_pl" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langRu"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_ru" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langUk"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_uk" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langJa"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_ja" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langZh"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_zh" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+        <RadioButton android:id="@+id/langAr"      android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:text="@string/language_ar" android:textColor="@color/app_on_surface" android:buttonTint="@color/app_on_surface" />
+
+    </RadioGroup>
+</ScrollView>
+

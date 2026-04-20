@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/group_filters"
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/action_all_files"
+        android:title="@string/menu_all_files"
+        android:icon="@drawable/ic_filter_all_files"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_photos"
+        android:title="@string/menu_images"
+        android:icon="@drawable/ic_filter_photos"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_videos"
+        android:title="@string/menu_videos"
+        android:icon="@drawable/ic_filter_video_file"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_folders"
+        android:title="@string/menu_folders"
+        android:icon="@drawable/ic_filter_folders"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_favorites"
+        android:title="@string/menu_favorites"
+        android:icon="@drawable/ic_filter_favorites"
+        app:showAsAction="always" />
+    </group>
+</menu>
+

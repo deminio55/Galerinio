@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/unlockCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_editor_input"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvUnlockTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/security_unlock_title"
+                android:textColor="@color/app_on_surface"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUnlockDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/security_unlock_desc"
+                android:textColor="@color/app_on_surface_secondary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/pinContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPinLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_pin"
+                    android:textColor="@color/app_on_surface" />
+
+                <EditText
+                    android:id="@+id/etPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/security_pin_hint"
+                    android:importantForAutofill="no"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberPassword"
+                    android:maxLength="12"
+                    android:textColor="@color/app_on_surface"
+                    android:textColorHint="@color/app_on_surface_secondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/patternContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPatternLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_pattern"
+                    android:textColor="@color/app_on_surface" />
+
+                <TextView
+                    android:id="@+id/tvPatternUnlockHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/security_draw_pattern"
+                    android:textColor="@color/app_on_surface"
+                    android:textSize="13sp" />
+
+                <com.example.galerinio.presentation.ui.widget.PatternLockView
+                    android:id="@+id/patternLockView"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#26000000" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnUnlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/security_unlock_now" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

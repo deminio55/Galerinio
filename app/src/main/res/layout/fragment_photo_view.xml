@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <com.example.galerinio.presentation.ui.widget.DragDismissFrameLayout
+        android:id="@+id/dragDismissLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/openingPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:background="@android:color/black"
+            android:visibility="gone" />
+
+        <!-- Drag handle pill at the top -->
+        <View
+            android:id="@+id/dragHandle"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/drag_handle_shape"
+            android:alpha="0.6" />
+
+        <!-- Close button — semi-transparent circle, top-left -->
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|top"
+            android:layout_margin="12dp"
+            android:src="@drawable/ic_close"
+            android:background="@drawable/close_btn_bg"
+            android:padding="8dp"
+            android:contentDescription="@string/close" />
+
+    </com.example.galerinio.presentation.ui.widget.DragDismissFrameLayout>
+
+</LinearLayout>

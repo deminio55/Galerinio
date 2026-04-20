@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <com.example.galerinio.presentation.ui.widget.ZoomImageView
+        android:id="@+id/photoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:contentDescription="@string/photo_view" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/videoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        app:resize_mode="fit"
+        app:surface_type="texture_view"
+        app:show_buffering="when_playing"
+        app:use_controller="true" />
+
+    <ImageView
+        android:id="@+id/videoPlayBadge"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:alpha="0.9"
+        android:background="#66000000"
+        android:contentDescription="@string/menu_videos"
+        android:padding="14dp"
+        android:src="@android:drawable/ic_media_play"
+        android:tint="@android:color/white"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/bottomActionsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#80000000"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/info_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/info" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/delete_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/delete" />
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/share_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/share" />
+
+        <ImageButton
+            android:id="@+id/btnCopy"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/copy_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/copy" />
+
+        <ImageButton
+            android:id="@+id/btnMove"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/move_icon"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/move" />
+
+        <ImageButton
+            android:id="@+id/btnRotateRight"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_rotate_right_24"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/rotate_right" />
+
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_brush_24"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/edit" />
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/heart_outline"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/favorite" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnVideoMore"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="84dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/video_more_actions"
+        android:src="@drawable/ic_more_vert_24"
+        android:tint="@android:color/white"
+        android:visibility="gone" />
+
+</FrameLayout>

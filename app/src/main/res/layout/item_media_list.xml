@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="@color/app_surface"
+    android:paddingStart="10dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:background="@android:color/black">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/media_item_border"
+                android:contentDescription="@string/media_item"
+                android:scaleType="centerCrop" />
+
+            <FrameLayout
+                android:id="@+id/videoOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/video_icon"
+                    android:src="@android:drawable/ic_media_play" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/protectedOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6E000000"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/protectedIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/security_enable_folder_protection"
+                android:src="@drawable/ic_lock_24"
+                android:tint="@android:color/white"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/fileNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/app_on_surface"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/selectionOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/selectionCheck"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/selection_check"
+        android:src="@drawable/ic_check_empty"
+        android:visibility="invisible" />
+
+</FrameLayout>
+
