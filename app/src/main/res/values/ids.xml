@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Keep geo filter id for state mapping while geo entry lives only in drawer/overlay. -->
+    <item name="filterGeo" type="id" />
+</resources>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="400"
+    android:interpolator="@android:interpolator/fast_out_slow_in"
+    android:transitionOrdering="together">
+
+    <!-- Основная анимация позиции и размера -->
+    <changeBounds>
+        <arcMotion
+            android:minimumHorizontalAngle="0"
+            android:minimumVerticalAngle="0"
+            android:maximumAngle="0" />
+    </changeBounds>
+
+    <!-- Анимация трансформации (поворот, масштаб) -->
+    <changeTransform />
+
+    <!-- Анимация изображения (crop, scale type) -->
+    <changeImageTransform />
+
+    <!-- Анимация границ обрезки -->
+    <changeClipBounds />
+
+    <!-- Плавное появление/исчезновение для мягкости -->
+    <fade
+        android:fadingMode="fade_in_out"
+        android:duration="200">
+        <targets>
+            <target android:excludeId="@android:id/navigationBarBackground" />
+            <target android:excludeId="@android:id/statusBarBackground" />
+        </targets>
+    </fade>
+
+</transitionSet>
+

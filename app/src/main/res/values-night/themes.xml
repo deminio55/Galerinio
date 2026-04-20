@@ -1,0 +1,98 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Galerinio" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/app_surface</item>
+        <item name="colorPrimaryVariant">@color/app_surface</item>
+        <item name="colorOnPrimary">@color/app_on_surface</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSurface">@color/app_surface</item>
+        <item name="colorOnSurface">@color/app_on_surface</item>
+        <item name="android:statusBarColor">@color/app_surface</item>
+        <item name="android:windowBackground">@color/app_surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/app_on_surface</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+
+    <style name="SpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/app_on_surface</item>
+    </style>
+
+    <style name="SpinnerDropDownItem" parent="android:Widget.DropDownItem.Spinner">
+        <item name="android:textColor">@color/app_on_surface</item>
+        <item name="android:background">@color/app_surface</item>
+    </style>
+
+    <style name="ThemeOverlay.Galerinio.ClearCacheDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/drawer_surface</item>
+        <item name="colorOnSurface">@color/app_on_surface</item>
+        <item name="android:colorBackground">@color/drawer_surface</item>
+        <item name="android:textColorPrimary">@color/app_on_surface</item>
+        <item name="android:textColorSecondary">@color/app_on_surface_secondary</item>
+    </style>
+
+    <style name="ThemeOverlay.Galerinio.CloudDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/app_on_surface</item>
+        <item name="colorSurface">@color/drawer_surface</item>
+        <item name="colorOnSurface">@color/app_on_surface</item>
+        <item name="android:colorBackground">@color/drawer_surface</item>
+        <item name="android:textColorPrimary">@color/app_on_surface</item>
+        <item name="android:textColorSecondary">@color/app_on_surface_secondary</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Galerinio.Dialog.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Galerinio.Dialog.Button</item>
+    </style>
+
+    <style name="Widget.Galerinio.Dialog.Button" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/app_on_surface</item>
+    </style>
+
+    <style name="Theme.Galerinio.Accent.Blue" parent="Theme.Galerinio">
+        <item name="colorSecondary">@color/accent_blue</item>
+        <item name="colorSecondaryVariant">@color/accent_blue_variant</item>
+        <item name="colorOnSecondary">@color/accent_blue_on</item>
+    </style>
+
+    <style name="Theme.Galerinio.Accent.Green" parent="Theme.Galerinio">
+        <item name="colorSecondary">@color/accent_green</item>
+        <item name="colorSecondaryVariant">@color/accent_green_variant</item>
+        <item name="colorOnSecondary">@color/accent_green_on</item>
+    </style>
+
+    <style name="Theme.Galerinio.Accent.Orange" parent="Theme.Galerinio">
+        <item name="colorSecondary">@color/accent_orange</item>
+        <item name="colorSecondaryVariant">@color/accent_orange_variant</item>
+        <item name="colorOnSecondary">@color/accent_orange_on</item>
+    </style>
+
+    <style name="Theme.Galerinio.Accent.Purple" parent="Theme.Galerinio">
+        <item name="colorSecondary">@color/accent_purple</item>
+        <item name="colorSecondaryVariant">@color/accent_purple_variant</item>
+        <item name="colorOnSecondary">@color/accent_purple_on</item>
+    </style>
+
+    <style name="Theme.Galerinio.Accent.Rose" parent="Theme.Galerinio">
+        <item name="colorSecondary">@color/accent_rose</item>
+        <item name="colorSecondaryVariant">@color/accent_rose_variant</item>
+        <item name="colorOnSecondary">@color/accent_rose_on</item>
+    </style>
+
+    <style name="Theme.Galerinio.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="windowSplashScreenAnimationDuration">0</item>
+        <item name="postSplashScreenTheme">@style/Theme.Galerinio.SplashPost</item>
+    </style>
+
+    <style name="Theme.Galerinio.SplashPost" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

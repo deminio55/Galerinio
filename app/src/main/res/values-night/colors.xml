@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_blue">#64B5F6</color>
+    <color name="accent_blue_variant">#42A5F5</color>
+    <color name="accent_blue_on">#FF000000</color>
+    <color name="accent_green">#81C784</color>
+    <color name="accent_green_variant">#66BB6A</color>
+    <color name="accent_green_on">#FF000000</color>
+    <color name="accent_orange">#FFB74D</color>
+    <color name="accent_orange_variant">#FFA726</color>
+    <color name="accent_orange_on">#FF000000</color>
+    <color name="accent_purple">#CE93D8</color>
+    <color name="accent_purple_variant">#BA68C8</color>
+    <color name="accent_purple_on">#FF000000</color>
+    <color name="accent_rose">#F48FB1</color>
+    <color name="accent_rose_variant">#F06292</color>
+    <color name="accent_rose_on">#FF000000</color>
+    <!-- Night theme semantic colors -->
+    <color name="app_surface">#FF1A1A1A</color>
+    <color name="drawer_surface">#FF3C3C3C</color>
+    <color name="lock_icon_closed">#FFFF4D4F</color>
+    <color name="app_on_surface">#FFFFFFFF</color>
+    <color name="app_on_surface_secondary">#B3FFFFFF</color>
+    <color name="app_divider">#33FFFFFF</color>
+    <color name="drawer_item_primary">#FFFFFFFF</color>
+    <color name="drawer_item_disabled">#80FFFFFF</color>
+    <color name="drawer_subheader_text_color">#FFFFFFFF</color>
+
+    <!-- Cloud storage drawer button/input colors (dark) -->
+    <color name="cloud_btn_text">#FFFFFFFF</color>
+    <color name="cloud_btn_stroke">#B3FFFFFF</color>
+    <color name="cloud_btn_filled_bg">#FFFFFFFF</color>
+    <color name="cloud_btn_filled_text">#FF1A1A1A</color>
+    <color name="cloud_input_hint">#B3FFFFFF</color>
+    <color name="cloud_input_focused_hint">#FFFFFFFF</color>
+    <color name="cloud_input_box_stroke">#FFFFFFFF</color>
+    <color name="cloud_switch_thumb_on">#FFFFFFFF</color>
+    <color name="cloud_switch_thumb_off">#FF808080</color>
+    <color name="cloud_switch_track_on">#80FFFFFF</color>
+    <color name="cloud_switch_track_off">#33FFFFFF</color>
+
+    <!-- Photo editor high-contrast controls (same visual baseline as light) -->
+    <color name="photo_editor_tool_surface">#FFF5F5F5</color>
+    <color name="photo_editor_tool_stroke">#FFCDCDCD</color>
+    <color name="photo_editor_tool_on_surface">#FF111111</color>
+    <color name="photo_editor_toolbar_surface">#FFF5F5F5</color>
+    <color name="photo_editor_toolbar_stroke">#FFD0D0D0</color>
+    <color name="photo_editor_input_hint">#99000000</color>
+</resources>
+

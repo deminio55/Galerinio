@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Outlined button for cloud screens (provider chooser, test connection, sync now) -->
+    <style name="Widget.Galerinio.Cloud.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/cloud_btn_text</item>
+        <item name="strokeColor">@color/cloud_btn_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="rippleColor">@color/cloud_btn_stroke</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Filled button for cloud screens (Save) -->
+    <style name="Widget.Galerinio.Cloud.FilledButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/cloud_btn_filled_text</item>
+        <item name="backgroundTint">@color/cloud_btn_filled_bg</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Text button for cloud screens (Add Account, Delete) -->
+    <style name="Widget.Galerinio.Cloud.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/cloud_btn_text</item>
+        <item name="rippleColor">@color/cloud_btn_stroke</item>
+    </style>
+
+    <!-- TextInputLayout for cloud screens -->
+    <style name="Widget.Galerinio.Cloud.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/cloud_input_hint</item>
+        <item name="hintTextColor">@color/cloud_input_focused_hint</item>
+        <item name="boxStrokeColor">@color/cloud_input_box_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="endIconTint">@color/cloud_btn_text</item>
+    </style>
+
+    <!-- SwitchCompat for cloud screens -->
+    <style name="Widget.Galerinio.Cloud.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="thumbTint">@color/cloud_switch_thumb</item>
+        <item name="trackTint">@color/cloud_switch_track</item>
+        <item name="android:textColor">@color/app_on_surface</item>
+    </style>
+
+</resources>
+

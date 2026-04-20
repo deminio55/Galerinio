@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="top_bar_dark">#FF1A1A1A</color>
+    <color name="accent_blue">#2196F3</color>
+    <color name="accent_blue_variant">#1976D2</color>
+    <color name="accent_blue_on">#FFFFFFFF</color>
+    <color name="accent_green">#2E7D32</color>
+    <color name="accent_green_variant">#1B5E20</color>
+    <color name="accent_green_on">#FFFFFFFF</color>
+    <color name="accent_orange">#EF6C00</color>
+    <color name="accent_orange_variant">#E65100</color>
+    <color name="accent_orange_on">#FFFFFFFF</color>
+    <color name="accent_purple">#6A1B9A</color>
+    <color name="accent_purple_variant">#4A148C</color>
+    <color name="accent_purple_on">#FFFFFFFF</color>
+    <color name="accent_rose">#C2185B</color>
+    <color name="accent_rose_variant">#AD1457</color>
+    <color name="accent_rose_on">#FFFFFFFF</color>
+    <color name="lock_icon_closed">#FFFF4D4F</color>
+    <color name="trash_selected_bg">#332196F3</color>
+
+    <!-- Day theme semantic colors (light palette) -->
+    <color name="app_surface">#FFFFFFFF</color>
+    <color name="drawer_surface">#FFFFFFFF</color>
+    <color name="app_on_surface">#FF1A1A1A</color>
+    <color name="app_on_surface_secondary">#991A1A1A</color>
+    <color name="app_divider">#1F000000</color>
+    <color name="drawer_item_primary">#FF1A1A1A</color>
+    <color name="drawer_item_disabled">#801A1A1A</color>
+    <color name="drawer_subheader_text_color">#FF1A1A1A</color>
+
+    <!-- Cloud storage drawer button/input colors (light) -->
+    <color name="cloud_btn_text">#FF1A1A1A</color>
+    <color name="cloud_btn_stroke">#99000000</color>
+    <color name="cloud_btn_filled_bg">#FF1A1A1A</color>
+    <color name="cloud_btn_filled_text">#FFFFFFFF</color>
+    <color name="cloud_input_hint">#99000000</color>
+    <color name="cloud_input_focused_hint">#FF1A1A1A</color>
+    <color name="cloud_input_box_stroke">#FF1A1A1A</color>
+    <color name="cloud_switch_thumb_on">#FF1A1A1A</color>
+    <color name="cloud_switch_thumb_off">#FFB0B0B0</color>
+    <color name="cloud_switch_track_on">#801A1A1A</color>
+    <color name="cloud_switch_track_off">#33000000</color>
+
+    <!-- Photo editor high-contrast controls (kept consistent for light/dark) -->
+    <color name="photo_editor_tool_surface">#FFF5F5F5</color>
+    <color name="photo_editor_tool_stroke">#FFCDCDCD</color>
+    <color name="photo_editor_tool_on_surface">#FF111111</color>
+    <color name="photo_editor_toolbar_surface">#FFF5F5F5</color>
+    <color name="photo_editor_toolbar_stroke">#FFD0D0D0</color>
+    <color name="photo_editor_input_hint">#99000000</color>
+</resources>
