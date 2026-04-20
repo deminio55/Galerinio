@@ -37,7 +37,7 @@ Following Clean Architecture with MVVM:
 
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/Galerinio.git](https://github.com/YOUR_USERNAME/Galerinio.git)
+   git clone [https://github.com/deminio55/Galerinio.git](https://github.com/YOUR_USERNAME/Galerinio.git)
    
 2.  Google Maps API:
 Add your key in app/src/main/res/values/strings.xml:
