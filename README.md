@@ -42,10 +42,6 @@ Following Clean Architecture with MVVM:
 2.  Google Maps API:
 Add your key in app/src/main/res/values/strings.xml:
 
-3.  XML
-<string name="google_maps_api_key">YOUR_KEY_HERE</string>
-Google Drive API:
-Follow the official guide to obtain your credentials.json and place it in the app's root directory or configure via secrets.properties.
 
 ⚖️ License & Attribution
 This project is licensed under the GNU General Public License v3.0 (GPLv3).
