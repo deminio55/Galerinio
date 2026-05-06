@@ -11,7 +11,7 @@
 
 - **NAS & Cloud Sync** — Backup and sync your media via Google Drive, WebDAV, SFTP, and SMB (Samba/Windows Share).
 - **Interactive Geo-Map** — Browse your memories on an integrated Google Maps view using EXIF metadata.
-- **Privacy First** — Biometric/PIN protection for the app and a dedicated hidden vault.
+- **Privacy First** — Biometric/PIN protection for the app and folders.
 - **Media Browsing** — Highly customizable grid/list views with "pinch-to-zoom" layout scaling.
 - **Built-in Editor** — Non-destructive photo editing (crop, rotate, resize).
 - **Video Excellence** — High-performance playback powered by Media3 ExoPlayer.
